@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyTeleprompter" parent="Theme.MaterialComponents.DayNight">
+        <item name="windowNoTitle">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

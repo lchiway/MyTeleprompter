@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/mcb_mirror"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="镜像"
+            android:shadowColor="@color/white"
+            android:textColor="@color/white"/>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/mcb_rolling"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mcb_mirror"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="滚动"
+            android:shadowColor="@color/white"
+            android:textColor="@color/white"/>
+
+        <!-- 滚动速度 -->
+        <LinearLayout
+            android:id="@+id/ll_scroll_speed_layout"
+            app:layout_constraintLeft_toRightOf="@id/mcb_rolling"
+            app:layout_constraintTop_toTopOf="@id/mcb_rolling"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="速度："
+                android:textColor="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/ib_speed_minus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_left_arrow"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actv_speed"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_text_view"/>
+
+            <ImageButton
+                android:id="@+id/ib_speed_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_right_arrow"/>
+        </LinearLayout>
+
+        <!-- 字号 -->
+        <LinearLayout
+            android:id="@+id/ll_scroll_font_size_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_scroll_speed_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="字体："
+                android:textColor="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/ib_font_size_minus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_left_arrow"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actv_font_size"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:inputType="number|numberDecimal"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_text_view" />
+
+            <ImageButton
+                android:id="@+id/ib_font_size_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_right_arrow"/>
+        </LinearLayout>
+
+        <!-- 字体颜色 -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
